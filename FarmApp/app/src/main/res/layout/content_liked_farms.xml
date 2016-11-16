@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_liked_farms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.scottlindley.farmgroceryapp.LikedFarmsActivity.LikedFarmsActivity"
+    tools:showIn="@layout/app_bar_liked_farms">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/likes_activity_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/no_liked_farms_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No Liked Farms Yet"
+        android:textSize="46sp"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:padding="32dp"/>
+
+</RelativeLayout>
