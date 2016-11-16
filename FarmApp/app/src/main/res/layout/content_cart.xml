@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_cart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.scottlindley.farmgroceryapp.CartActivity.CartActivity"
+    tools:showIn="@layout/app_bar_cart">
+
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/bottom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:elevation="6dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/subtotal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subtotal:"
+                android:textColor="#eee"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="16dp"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/subtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#eee"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="16dp"
+                android:textSize="16sp"
+                android:layout_toRightOf="@id/subtotal_text"/>
+            <TextView
+                android:id="@+id/tax_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tax:"
+                android:textColor="#eee"
+                android:layout_marginTop="16dp"
+                android:layout_alignRight="@id/subtotal_text"
+                android:textSize="16sp"
+                android:layout_below="@id/subtotal_text"/>
+            <TextView
+                android:id="@+id/tax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#eee"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:layout_alignLeft="@id/subtotal"
+                android:layout_toRightOf="@id/tax_text"
+                android:layout_below="@id/subtotal"/>
+            <TextView
+                android:id="@+id/total_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total:"
+                android:textColor="#eee"
+                android:layout_marginTop="16dp"
+                android:layout_alignRight="@id/subtotal_text"
+                android:textSize="18sp"
+                android:layout_below="@id/tax_text"/>
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#eee"
+                android:layout_marginTop="16dp"
+                android:layout_alignLeft="@id/subtotal"
+                android:textSize="18sp"
+                android:layout_below="@id/tax_text"/>
+            <android.support.v7.widget.CardView
+                android:id="@+id/place_order_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Place Order"
+                    android:textColor="#000"
+                    android:layout_margin="12dp"
+                    android:textSize="22sp"/>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cart_recycler"
+        android:layout_above="@id/bottom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/empty_cart_text"
+        android:background="#eee"
+        android:text="Cart is empty!"
+        android:textSize="46sp"
+        android:gravity="center_horizontal"
+        android:paddingTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"/>
+
+
+
+</RelativeLayout>
